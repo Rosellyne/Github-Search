@@ -4,7 +4,7 @@
   <div class ="col-md-12">
 <form action="">
   <div class="form-group">
-    <input type="text" class="form-control"placeholder="Github Username">
+    <input type="text" class="form-control"placeholder="Github Username"[(ngModel)]="username" name="username"(keyup)=findProfile()>
   </div>
 </form>
 </div>
@@ -34,10 +34,22 @@
             <span class="label label-primary">{{profile.following}} Following</span>
             <span class="label label-success">{{profile.public_gists}} Public Gists</span>
             <span class="label label-infor">{{profile.public_repos}} Public Repos</span>
-            <p
+            <p><a href="profile.html_url" target="_blank" class="btn btn-success btn -sm">View the profile on github</a></p>
+            <div class=" panel panel-default">
+              <div class="panel-heading">
+                <h2 class="panel-title"> Repos</h2>
+              </div>
+              <div class=" panel-body"*ngFor="let repo of repos">
+                <p>
+                  {{repo.name}}<a href="{{repo.html_url}}"target="_blank"class="btn btn-warning btn-sm">view the project</a>
+                </p>
+                <p>{{repo.description}}</p>
+
+              </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>

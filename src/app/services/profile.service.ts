@@ -25,4 +25,7 @@ export class ProfileService {
     return this.http.get('https://api.github.com/users/' + this.username + '/repos?access_token =ca67b4a50368288ef9eb1983082946b449dc7bce')
     .pipe(map(res => res));
   }
+  updateProfile(username: string) {
+    this.username = username;
+  }
 }
