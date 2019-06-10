@@ -7,7 +7,18 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Description
 This application enables an individual to search for a github user's name on the application and display the information of the individual.
 
-## Installation requirements
+## Installations
+
+###  Requirements
++ VS code
++ Chrome browser
+
+### Technologies Used
+
++ Typescript
++ CSS
++ Bootstrap
+
 
 ## Program Behaviour
 
