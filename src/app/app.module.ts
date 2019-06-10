@@ -8,11 +8,13 @@ import {RoutingModule} from './routing/routing.module';
 
 import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
+import { LastnamePipe } from './lastname.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchComponent
+    SearchComponent,
+    LastnamePipe
   ],
   imports: [
     BrowserModule,

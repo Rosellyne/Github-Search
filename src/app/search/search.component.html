@@ -19,8 +19,6 @@
         <div class="col-md-4">
           <img src="{{profile.avatar_url}}"  class="img-circle img-responsive" alt="profile image" >
         </div>
-        <br>
-        <div class= "card">
         <div class="col-md-4">
           <ul class="group">
             <li class=" list-group-item"*ngIf="profile.bio">{{profile.bio}}</li>
@@ -29,7 +27,6 @@
             <li class=" list-group-item"*ngIf="profile.email"><a href="{{profile.email}}" target="_blank">{{profile.email}}</a></li>
           </ul>
         </div>
-      </div>
         <div class="col-md-4">
           <div class="clean">
             <span class="label label-default">{{profile.followers}} Followers</span>
