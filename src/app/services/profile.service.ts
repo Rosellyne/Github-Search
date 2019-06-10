@@ -9,7 +9,7 @@ import { environment } from '../../environments/environment';
 })
 export class ProfileService {
 
-    private clientdetails: string = 'f6df3d84a335a2d6be9baa66c3b843c94b18edc2';
+    apiUrl = environment.apiUrl;
     private username: string;
     private repo: string;
 
@@ -19,11 +19,11 @@ export class ProfileService {
     this.repo = '';
   }
   getProfile(): any {
-    return this.http.get('https://api.github.com/users/' + this.username + '?access_token' = + this.clientdetails)
+    return this.http.get('https://api.github.com/users/' + this.username + '?access_token=f6df3d84a335a2d6be9baa66c3b843c94b18edc2')
     .pipe(map(res => res));
   }
   getRepos(): any {
-    return this.http.get('https://api.github.com/users/' + this.username + '/repos?access_token '= + this.clientdetails)
+    return this.http.get('https://api.github.com/users/' + this.username + '/repos?access_token =f6df3d84a335a2d6be9baa66c3b843c94b18edc2')
     .pipe(map(res => res));
   }
   updateProfile(username: string) {

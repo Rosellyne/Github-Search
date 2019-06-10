@@ -36,22 +36,21 @@
         </div>
         <div class="col-md-4">
           <div class="clean">
-            <h3 class="label label-default">{{profile.followers}} Followers:</h3>
-            <h3 class="label label-primary">{{profile.following}} Following:</h3>
-            <h3 class="label label-success">{{profile.public_gists}} Public Gists:</h3>
-            <h3 class="label label-infor">{{profile.public_repos}} Public Repos:</h3>
+            <h3 class="label label-default">Followers:{{profile.followers}} </h3>
+            <h3 class="label label-primary"> Following:{{profile.following}} </h3>
+            <h3 class="label label-success"> Public Gists:{{profile.public_gists}} </h3>
+            <h3 class="label label-infor">Public Repos: {{profile.public_repos}} </h3>
             <p><a href="profile.html_url" target="_blank" class="btn btn-success btn -sm">View the profile on github</a></p>
             <div class=" panel panel-default">
               <div class="panel-heading">
                 <h2 class="panel-title"> Repos</h2>
               </div>
-              <div class=" panel-body"*ngFor="let repo of repos">
-                <p>
-                  {{repo.name}}<a href="{{repo.html_url}}"target="_blank" id="try"class="btn btn-warning btn-sm">view the project </a>
+              <div class=" panel-body" *ngFor="let repos of repos">
+                <p class="text-center">
+                  {{repos.name}}  <a href="{{repos.html_url}}"target="_blank" id="try"class="btn btn-warning btn-sm">   view the project </a>
                 </p>
                 <br>
-                <p>{{repo.description}}</p>
-
+                <p>{{repos.description}}</p>
               </div>
               </div>
             </div>

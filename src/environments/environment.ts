@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https:// api.github.com/users/'
+  apiUrl: 'https:// api.github.com/users/Rosellyne?access_token =f6df3d84a335a2d6be9baa66c3b843c94b18edc2'
 
 };
 
