@@ -3,8 +3,11 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.5.
 
 ## Author
+
 + Roselyne Moraa.
+
 ## Description
+
 This application enables an individual to search for a github user's name on the application and display the information of the individual.
 
 ## Installations

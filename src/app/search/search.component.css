@@ -2,12 +2,23 @@ h1{
   text-align: center;
   font-size: 3em;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  background-color: grey;
+  background-color: black;
+ color:white;
 }
 .form-control{
   padding:0.6em;
   border: radius 0.5rem;
   width: 100%;
   margin-right: 2rem;
+  margin-top: 10%;
+  margin-bottom:10%;
+}
+#try{
+  margin-right: 5%;
+}
+h3{
+  font-size: 4vh;
+  color:red;
+
 }
 

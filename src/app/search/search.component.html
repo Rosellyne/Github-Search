@@ -10,10 +10,17 @@
 </div>
 </div>
 <div *ngIf="profile">
-  <div class="panel panel-default">
-    <div class="panel panel-heading">
-     <h2 class="panel-title"> {{profile.name}}</h2>
+  <div class="panel pane-default">
+    <br>
+    <br>
+    <div class="panel-heading">
+      {{profile.name}}
+      <small>{{profile.login}}</small>
+      <span *ngIf="profile.company">,works at {{profile.company}}</span>
+      {{profile.location}}
     </div>
+    <br>
+  </div>
     <div class="panel-body">
       <div class="row">
         <div class="col-md-4">
@@ -21,18 +28,18 @@
         </div>
         <div class="col-md-4">
           <ul class="group">
-            <li class=" list-group-item"*ngIf="profile.bio">{{profile.bio}}</li>
-            <li class=" list-group-item"*ngIf="profile.hireable">Available for hire</li>
+             <li class=" list-group-item"*ngIf="profile.bio">{{profile.bio}}</li>
+             <li class=" list-group-item"*ngIf="profile.hireable">Available for hire</li>
             <li class=" list-group-item"*ngIf="profile.blog"><a href="{{profile.blog}}" target="_blank">{{profile.blog}}</a></li>
             <li class=" list-group-item"*ngIf="profile.email"><a href="{{profile.email}}" target="_blank">{{profile.email}}</a></li>
           </ul>
         </div>
         <div class="col-md-4">
           <div class="clean">
-            <span class="label label-default">{{profile.followers}} Followers</span>
-            <span class="label label-primary">{{profile.following}} Following</span>
-            <span class="label label-success">{{profile.public_gists}} Public Gists</span>
-            <span class="label label-infor">{{profile.public_repos}} Public Repos</span>
+            <h3 class="label label-default">{{profile.followers}} Followers:</h3>
+            <h3 class="label label-primary">{{profile.following}} Following:</h3>
+            <h3 class="label label-success">{{profile.public_gists}} Public Gists:</h3>
+            <h3 class="label label-infor">{{profile.public_repos}} Public Repos:</h3>
             <p><a href="profile.html_url" target="_blank" class="btn btn-success btn -sm">View the profile on github</a></p>
             <div class=" panel panel-default">
               <div class="panel-heading">
@@ -40,8 +47,9 @@
               </div>
               <div class=" panel-body"*ngFor="let repo of repos">
                 <p>
-                  {{repo.name}}<a href="{{repo.html_url}}"target="_blank"class="btn btn-warning btn-sm">view the project</a>
+                  {{repo.name}}<a href="{{repo.html_url}}"target="_blank" id="try"class="btn btn-warning btn-sm">view the project </a>
                 </p>
+                <br>
                 <p>{{repo.description}}</p>
 
               </div>
@@ -51,4 +59,5 @@
         </div>
       </div>
     </div>
-  </div>
+
+

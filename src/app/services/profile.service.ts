@@ -8,7 +8,8 @@ import { environment } from '../../environments/environment';
   providedIn: 'root'
 })
 export class ProfileService {
-    apiUrl = environment.apiUrl;
+
+    private clientdetails: string = 'f6df3d84a335a2d6be9baa66c3b843c94b18edc2';
     private username: string;
     private repo: string;
 
@@ -18,11 +19,11 @@ export class ProfileService {
     this.repo = '';
   }
   getProfile(): any {
-    return this.http.get('https://api.github.com/users/' + this.username + '?access_token =ca67b4a50368288ef9eb1983082946b449dc7bce')
+    return this.http.get('https://api.github.com/users/' + this.username + '?access_token' = + this.clientdetails)
     .pipe(map(res => res));
   }
   getRepos(): any {
-    return this.http.get('https://api.github.com/users/' + this.username + '/repos?access_token =ca67b4a50368288ef9eb1983082946b449dc7bce')
+    return this.http.get('https://api.github.com/users/' + this.username + '/repos?access_token '= + this.clientdetails)
     .pipe(map(res => res));
   }
   updateProfile(username: string) {
